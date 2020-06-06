@@ -12,6 +12,7 @@ public class OracleConnection {
 	{
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
+			open();
 		} catch (ClassNotFoundException e) {
 			throw new CustomerException("Can not find Driver");
 		}
